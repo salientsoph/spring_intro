@@ -12,11 +12,11 @@ public class HelloController {
     @GetMapping("hello")  //localhost:8080/hello 접근 시 해당 메소드 호출
     public String hello(Model model){
         model.addAttribute("data", "hello!!!");
-        return "hello";  //templates/hello.html 로 이동
+        return "hello";   //templates/hello.html 로 이동
     }
 
     @GetMapping("hello-mvc")
-    public String helloMvc(@RequestParam(value = "name", required = false) String name, Model model){
+    public String helloMvc(@RequestParam(value = "name", required = false ) String name, Model model){
         model.addAttribute("name", name);
         return "hello-template";
     }
